@@ -11,6 +11,7 @@
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -547,7 +548,11 @@
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
       <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Profit per Customer]' role='measure' type='quantitative' />
+      <column datatype='integer' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
       <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Sales]' role='measure' type='quantitative' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
       <_.fcp.ObjectModelTableType.true...column caption='Sample - Superstore' datatype='table' name='[__tableau_internal_object_id__].[Sample - Superstore_453AB6F29E8F4DD4B86AA88406A64BC7]' role='measure' type='quantitative' />
       <column-instance column='[Quantity]' derivation='Sum' name='[cum:sum:Quantity:qk:2]' pivot='key' type='quantitative'>
@@ -559,6 +564,7 @@
       <column-instance column='[Quantity]' derivation='Sum' name='[cum:sum:Quantity:qk]' pivot='key' type='quantitative'>
         <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
       </column-instance>
+      <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
       <column-instance column='[Quantity]' derivation='Sum' name='[pcdf:sum:Quantity:qk]' pivot='key' type='quantitative'>
         <table-calc diff-options='Relative,Compounded' ordering-field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[Order Date]' ordering-type='Field' type='PctDiff'>
           <address>
@@ -572,7 +578,10 @@
       <column-instance column='[Quantity]' derivation='Sum' name='[rank:sum:Quantity:qk]' pivot='key' type='quantitative'>
         <table-calc ordering-type='Rows' rank-options='Competition,Descending' type='Rank' />
       </column-instance>
+      <column-instance column='[Profit per Customer]' derivation='Sum' name='[sum:Profit per Customer:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Quantity]' derivation='Sum' name='[win:sum:Quantity:qk:2]' pivot='key' type='quantitative'>
         <table-calc aggregation='Avg' from='-30' ordering-type='Rows' to='0' type='WindowTotal' window-options='IncludeCurrent' />
       </column-instance>
@@ -589,15 +598,14 @@
         <table-calc aggregation='Avg' from='-2' ordering-type='Rows' to='0' type='WindowTotal' window-options='IncludeCurrent' />
       </column-instance>
       <drill-paths>
+        <drill-path name='Category, Sub-Category'>
+          <field>[Category]</field>
+          <field>[Sub-Category]</field>
+        </drill-path>
         <drill-path name='Country, State, City'>
           <field>[Country]</field>
           <field>[State]</field>
           <field>[City]</field>
-        </drill-path>
-        <drill-path name='Segment, Category, Sub-Category'>
-          <field>[Segment]</field>
-          <field>[Sub-Category]</field>
-          <field>[Category]</field>
         </drill-path>
       </drill-paths>
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='false' units='records'>
@@ -988,7 +996,13 @@
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[:Measure Names]' palette='jewel_bright_10_0' type='palette'>
+          <encoding attr='color' field='[:Measure Names]' palette='blue_red_brown_10_0' type='palette'>
+            <map to='#466f9d'>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Region:nk]&quot;</bucket>
+            </map>
+            <map to='#466f9d'>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]&quot;</bucket>
+            </map>
             <map to='#64cdcc'>
               <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[win:sum:Quantity:qk:2]&quot;</bucket>
             </map>
@@ -1000,6 +1014,9 @@
             </map>
             <map to='#767f8b'>
               <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Quantity:qk]&quot;</bucket>
+            </map>
+            <map to='#91b3d7'>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]&quot;</bucket>
             </map>
             <map to='#bbc9e5'>
               <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[cum:sum:Quantity:qk:2]&quot;</bucket>
@@ -1024,6 +1041,9 @@
             </map>
             <map to='#bbc9e5'>
               <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[win:sum:Quantity:qk]&quot;</bucket>
+            </map>
+            <map to='#ed444a'>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit per Customer:qk]&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1077,26 +1097,144 @@
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='Area &amp; Pie Divided'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>2015 - 2019 Sales</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
             <datasource caption='Sample - Superstore (Superstore data file)' name='federated.0w3g17k1cozqoe142npdk15hlxcz' />
           </datasources>
           <datasource-dependencies datasource='federated.0w3g17k1cozqoe142npdk15hlxcz'>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Segment]' derivation='None' name='[none:Segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Month-Trunc' name='[tmn:Order Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[tmn:Order Date:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Region:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]' palette='red_green_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Region:nk]' />
+              <text column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Region:nk] * [federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk])</rows>
+        <cols>([federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk] * [federated.0w3g17k1cozqoe142npdk15hlxcz].[tmn:Order Date:qk])</cols>
+      </table>
+      <simple-id uuid='{42C7B483-DBDA-40F5-9088-C5A3CED30178}' />
+    </worksheet>
+    <worksheet name='Disc &amp; Con'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sample - Superstore (Superstore data file)' name='federated.0w3g17k1cozqoe142npdk15hlxcz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w3g17k1cozqoe142npdk15hlxcz'>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Month-Trunc' name='[tmn:Order Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Order Date]' derivation='Year' name='[yr:Order Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]</rows>
+        <cols>([federated.0w3g17k1cozqoe142npdk15hlxcz].[yr:Order Date:ok] * [federated.0w3g17k1cozqoe142npdk15hlxcz].[tmn:Order Date:qk])</cols>
+      </table>
+      <simple-id uuid='{A7DCC9CE-7E33-4FB6-97AA-33C5F66C9BF8}' />
+    </worksheet>
+    <worksheet name='Heat Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sample - Superstore (Superstore data file)' name='federated.0w3g17k1cozqoe142npdk15hlxcz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w3g17k1cozqoe142npdk15hlxcz'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Sales]' role='measure' type='quantitative' />
             <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
             <column datatype='string' name='[Sub-Category]' role='dimension' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Segment]' derivation='None' name='[none:Segment:nk]' pivot='key' type='nominal' />
             <column-instance column='[Sub-Category]' derivation='None' name='[none:Sub-Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' shelf='rows' />
+            <shelf-sort-v2 dimension-to-sort='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk]' member-value='&quot;Home Office&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
           </shelf-sorts>
           <aggregation value='true' />
         </view>
         <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk]' value='123' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-weight' data-class='subtotal' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk]' value='bold' />
+            <format attr='color' data-class='subtotal' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk]' value='#af4345' />
+            <format attr='font-size' data-class='subtotal' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk]' value='11' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0' />
           </style-rule>
@@ -1106,23 +1244,122 @@
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' />
+              <text column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' />
+            </encodings>
             <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
               <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows>([federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk] / [federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk])</rows>
-        <cols>[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]</cols>
+        <rows total='true'>([federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Category:nk] / [federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Sub-Category:nk])</rows>
+        <cols total='true'>[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk]</cols>
+        <subtotals>
+          <column>[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Category:nk]</column>
+        </subtotals>
       </table>
       <simple-id uuid='{6B2FF25D-57EF-40BD-8EF7-4B31D0ABFED7}' />
     </worksheet>
+    <worksheet name='Measure values &amp; names'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sample - Superstore (Superstore data file)' name='federated.0w3g17k1cozqoe142npdk15hlxcz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0w3g17k1cozqoe142npdk15hlxcz'>
+            <column datatype='integer' name='[Profit per Customer]' role='measure' type='quantitative' />
+            <column datatype='integer' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Profit]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Segment]' role='dimension' type='nominal' />
+            <column-instance column='[Segment]' derivation='None' name='[none:Segment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Profit per Customer]' derivation='Sum' name='[sum:Profit per Customer:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Profit]' derivation='Sum' name='[sum:Profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit per Customer:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Quantity:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Profit per Customer:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]' value='76' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0w3g17k1cozqoe142npdk15hlxcz].[Multiple Values]</rows>
+        <cols>([federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Segment:nk] / [federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{3D5E30F9-EEB6-416E-9F94-520118D166B9}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{48E74CA4-F7C2-401D-8C8D-F5FA532F5A56}' />
+    </worksheet>
   </worksheets>
   <windows source-height='37'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Heat Map'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1142,12 +1379,123 @@
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w3g17k1cozqoe142npdk15hlxcz].[sum:Sales:qk]' type='color' />
+          </strip>
+        </edge>
       </cards>
       <viewpoint>
-        <zoom type='fit-width' />
+        <zoom type='fit-height' />
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{584CDEBC-642F-4758-983F-F6C84BC31FF5}' />
+    </window>
+    <window class='worksheet' name='Disc &amp; Con'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BAD2FCC1-2506-40A7-831A-6390C4E27BDE}' />
+    </window>
+    <window class='worksheet' name='Measure values &amp; names'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w3g17k1cozqoe142npdk15hlxcz].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15F77AE4-9FEB-428C-8209-7EDB3F4BD3F9}' />
+    </window>
+    <window class='worksheet' name='Area &amp; Pie Divided'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0w3g17k1cozqoe142npdk15hlxcz].[none:Region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{4FC1614B-DE31-42AA-B2E1-D6F21A19368B}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='30'>
+            <card type='columns' />
+          </strip>
+          <strip size='30'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7D47293B-3F64-41F4-9075-B68903BA9D76}' />
     </window>
   </windows>
 </workbook>
