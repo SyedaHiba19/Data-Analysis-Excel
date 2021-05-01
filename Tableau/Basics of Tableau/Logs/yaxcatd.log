@@ -1,0 +1,174 @@
+yaxcatd (C:\Program Files\Tableau\Tableau 2021.1\bin\yaxcat\yaxcatd.exe) built at dc7ad89 listening on 127.0.0.1:55279 with 8 worker threads.
+2021-04-27T16:03:49+0530 0.026ms; [no ensemble]::ping: 
+2021-04-27T16:03:49+0530 0.011ms; [no ensemble]::ping: 
+2021-04-27T16:03:49+0530 8.088ms; RemoteEnsemble(16 models, 1 columns)::upload_data: 127x1, dt_U2BM636D4CJFYNZHZMBDJ6I5
+2021-04-27T16:03:49+0530 15.203ms; RemoteEnsemble(16 models, 1 columns)::simulate_given_values: n = 100, 1 targets, 1x0 givens
+2021-04-27T16:03:49+0530 0.046ms; [no ensemble]::delete_data: dt_U2BM636D4CJFYNZHZMBDJ6I5, deleted = yes
+2021-04-27T16:03:50+0530 0.734ms; RemoteEnsemble(16 models, 1 columns)::upload_data: 127x1, dt_BIVJYXBGZGDHHQPNU5H6ARTD
+2021-04-27T16:03:50+0530 1.956ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.229ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.374ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: excess kurtosis of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.025ms; [no ensemble]::delete_data: dt_BIVJYXBGZGDHHQPNU5H6ARTD, deleted = yes
+2021-04-27T16:03:50+0530 0.729ms; RemoteEnsemble(16 models, 1 columns)::upload_data: 127x1, dt_YMZFLJR4Z3FUEFIFD7CUY4DV
+2021-04-27T16:03:50+0530 1.697ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 1.494ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 1.691ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: excess kurtosis of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.045ms; [no ensemble]::delete_data: dt_YMZFLJR4Z3FUEFIFD7CUY4DV, deleted = yes
+2021-04-27T16:03:50+0530 0.715ms; RemoteEnsemble(16 models, 1 columns)::upload_data: 127x1, dt_CGTRFPX2UFEWXFTVVVUWGRAK
+2021-04-27T16:03:50+0530 1.978ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.365ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 1.991ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: excess kurtosis of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.087ms; [no ensemble]::delete_data: dt_CGTRFPX2UFEWXFTVVVUWGRAK, deleted = yes
+2021-04-27T16:03:50+0530 0.735ms; RemoteEnsemble(16 models, 1 columns)::upload_data: 127x1, dt_O2KTLDZYVY2XKBSP2ZXILMWH
+2021-04-27T16:03:50+0530 1.416ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 1.033ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 1.411ms; RemoteEnsemble(16 models, 1 columns)::univariate_stat: excess kurtosis of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.044ms; [no ensemble]::delete_data: dt_O2KTLDZYVY2XKBSP2ZXILMWH, deleted = yes
+2021-04-27T16:03:50+0530 0.839ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_XFRZEYOVHUWH5QH4TCZ7GVIF
+2021-04-27T16:03:50+0530 1.744ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.088ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 4.217ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.089ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.104ms; [no ensemble]::delete_data: dt_XFRZEYOVHUWH5QH4TCZ7GVIF, deleted = yes
+2021-04-27T16:03:50+0530 0.736ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_TYI3QU23CHG2WRQSAJCNXZP3
+2021-04-27T16:03:50+0530 8.067ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 832x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 27.666ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 832x1 targets, 832x1 givens
+2021-04-27T16:03:50+0530 0.278ms; [no ensemble]::delete_data: dt_TYI3QU23CHG2WRQSAJCNXZP3, deleted = yes
+2021-04-27T16:03:50+0530 0.787ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_KY3RZQCL2ONSYSGZAVF7I3ZH
+2021-04-27T16:03:50+0530 1.685ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.057ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.250ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.131ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.173ms; [no ensemble]::delete_data: dt_KY3RZQCL2ONSYSGZAVF7I3ZH, deleted = yes
+2021-04-27T16:03:50+0530 0.770ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_XXRE2A5HM5XMINPRIY6D27KR
+2021-04-27T16:03:50+0530 5.480ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 624x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 19.695ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 624x1 targets, 624x1 givens
+2021-04-27T16:03:50+0530 0.240ms; [no ensemble]::delete_data: dt_XXRE2A5HM5XMINPRIY6D27KR, deleted = yes
+2021-04-27T16:03:50+0530 0.874ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_WMRQR2BEYQLLGH2FOQ6HRRWA
+2021-04-27T16:03:50+0530 1.629ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.094ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.375ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.081ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.112ms; [no ensemble]::delete_data: dt_WMRQR2BEYQLLGH2FOQ6HRRWA, deleted = yes
+2021-04-27T16:03:50+0530 0.732ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_JZKPY2KZHFPN4QAMB4D7T7RO
+2021-04-27T16:03:50+0530 4.789ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 528x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 21.572ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 528x1 targets, 528x1 givens
+2021-04-27T16:03:50+0530 0.162ms; [no ensemble]::delete_data: dt_JZKPY2KZHFPN4QAMB4D7T7RO, deleted = yes
+2021-04-27T16:03:50+0530 0.745ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_FUH3EICEFORW3KEO2ZH7O6UU
+2021-04-27T16:03:50+0530 1.617ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.057ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.283ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.126ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.155ms; [no ensemble]::delete_data: dt_FUH3EICEFORW3KEO2ZH7O6UU, deleted = yes
+2021-04-27T16:03:50+0530 0.769ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_YUTSCLJGEGN76373RMM5TLTP
+2021-04-27T16:03:50+0530 4.188ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 48x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 6.093ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 48x1 targets, 48x1 givens
+2021-04-27T16:03:50+0530 0.058ms; [no ensemble]::delete_data: dt_YUTSCLJGEGN76373RMM5TLTP, deleted = yes
+2021-04-27T16:03:50+0530 0.752ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_WO6B7X27DTKMHE3IXCMPEAQY
+2021-04-27T16:03:50+0530 1.442ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.071ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.526ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.094ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.066ms; [no ensemble]::delete_data: dt_WO6B7X27DTKMHE3IXCMPEAQY, deleted = yes
+2021-04-27T16:03:50+0530 0.725ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_Q36DNYANJLBEOXS6OTR4ZG2E
+2021-04-27T16:03:50+0530 0.673ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 32x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 5.453ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 32x1 targets, 32x1 givens
+2021-04-27T16:03:50+0530 0.050ms; [no ensemble]::delete_data: dt_Q36DNYANJLBEOXS6OTR4ZG2E, deleted = yes
+2021-04-27T16:03:50+0530 1.095ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_HDDA66H4JQCUGM4TTQGUVMGO
+2021-04-27T16:03:50+0530 1.519ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.083ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.934ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.200ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.136ms; [no ensemble]::delete_data: dt_HDDA66H4JQCUGM4TTQGUVMGO, deleted = yes
+2021-04-27T16:03:50+0530 1.096ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_CHK7IFXXSWIN2GD5YJIKSSFI
+2021-04-27T16:03:50+0530 54.878ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 3696x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 73.882ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 3696x1 targets, 3696x1 givens
+2021-04-27T16:03:50+0530 1.070ms; [no ensemble]::delete_data: dt_CHK7IFXXSWIN2GD5YJIKSSFI, deleted = yes
+2021-04-27T16:03:50+0530 1.126ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_MZSTRUK72ASZIPSBZTT323PF
+2021-04-27T16:03:50+0530 2.260ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.082ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.950ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.084ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.126ms; [no ensemble]::delete_data: dt_MZSTRUK72ASZIPSBZTT323PF, deleted = yes
+2021-04-27T16:03:50+0530 0.745ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_FQUI6IPITO24GNLKP2VIMENN
+2021-04-27T16:03:50+0530 0.947ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 64x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 21.536ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 64x1 targets, 64x1 givens
+2021-04-27T16:03:50+0530 0.101ms; [no ensemble]::delete_data: dt_FQUI6IPITO24GNLKP2VIMENN, deleted = yes
+2021-04-27T16:03:50+0530 1.027ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_RXGXHT22JACAFRWOPL4GYROE
+2021-04-27T16:03:50+0530 1.404ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.065ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.790ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.087ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.130ms; [no ensemble]::delete_data: dt_RXGXHT22JACAFRWOPL4GYROE, deleted = yes
+2021-04-27T16:03:50+0530 1.062ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_J7DAIF2SLLBUYWVKSBM5MTRC
+2021-04-27T16:03:50+0530 2.250ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 240x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 18.928ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 240x1 targets, 240x1 givens
+2021-04-27T16:03:50+0530 0.117ms; [no ensemble]::delete_data: dt_J7DAIF2SLLBUYWVKSBM5MTRC, deleted = yes
+2021-04-27T16:03:50+0530 0.738ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_IK4BEKKL3O5HNV65A2NWOQEM
+2021-04-27T16:03:50+0530 1.937ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.074ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.267ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.068ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.072ms; [no ensemble]::delete_data: dt_IK4BEKKL3O5HNV65A2NWOQEM, deleted = yes
+2021-04-27T16:03:50+0530 0.929ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_XKPTUQAWJD35SY5SSEJXG72I
+2021-04-27T16:03:50+0530 0.615ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 32x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 21.567ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 32x1 targets, 32x1 givens
+2021-04-27T16:03:50+0530 0.065ms; [no ensemble]::delete_data: dt_XKPTUQAWJD35SY5SSEJXG72I, deleted = yes
+2021-04-27T16:03:50+0530 0.855ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_3672OJ4HACGKO4THM6QDX4JM
+2021-04-27T16:03:50+0530 1.458ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.072ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.684ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.077ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.176ms; [no ensemble]::delete_data: dt_3672OJ4HACGKO4THM6QDX4JM, deleted = yes
+2021-04-27T16:03:50+0530 0.744ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_WALQU3LWBVZ3XGTE4NEPIH2C
+2021-04-27T16:03:50+0530 6.586ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 768x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 25.413ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 768x1 targets, 768x1 givens
+2021-04-27T16:03:50+0530 0.295ms; [no ensemble]::delete_data: dt_WALQU3LWBVZ3XGTE4NEPIH2C, deleted = yes
+2021-04-27T16:03:50+0530 0.860ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_MDKBZN63OZLBZLRNVLOC2B3J
+2021-04-27T16:03:50+0530 1.692ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.068ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.282ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.070ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.170ms; [no ensemble]::delete_data: dt_MDKBZN63OZLBZLRNVLOC2B3J, deleted = yes
+2021-04-27T16:03:50+0530 0.727ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_5MVWTT6WOCLPJGAXBNVAFWHI
+2021-04-27T16:03:50+0530 7.222ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 752x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 30.504ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 752x1 targets, 752x1 givens
+2021-04-27T16:03:50+0530 0.421ms; [no ensemble]::delete_data: dt_5MVWTT6WOCLPJGAXBNVAFWHI, deleted = yes
+2021-04-27T16:03:50+0530 0.808ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_VMJG6B5LAJERFERADDLSAYAN
+2021-04-27T16:03:50+0530 1.336ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.057ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.018ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.088ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.072ms; [no ensemble]::delete_data: dt_VMJG6B5LAJERFERADDLSAYAN, deleted = yes
+2021-04-27T16:03:50+0530 0.764ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_DQNOBXXO22SCWUWHGLPFYV4Z
+2021-04-27T16:03:50+0530 4.952ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 576x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 21.401ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 576x1 targets, 576x1 givens
+2021-04-27T16:03:50+0530 0.277ms; [no ensemble]::delete_data: dt_DQNOBXXO22SCWUWHGLPFYV4Z, deleted = yes
+2021-04-27T16:03:50+0530 0.733ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_TWW5FNSTMTHFBPINH334FU5G
+2021-04-27T16:03:50+0530 1.854ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.081ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.771ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.078ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.064ms; [no ensemble]::delete_data: dt_TWW5FNSTMTHFBPINH334FU5G, deleted = yes
+2021-04-27T16:03:50+0530 0.760ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 795x2, dt_NKIB4LKXRTCTJXVRH4YLB6S2
+2021-04-27T16:03:50+0530 2.815ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 256x1 targets, 1x0 givens
+2021-04-27T16:03:50+0530 17.658ms; RemoteEnsemble(16 models, 2 columns)::logpdf_given_values: 256x1 targets, 256x1 givens
+2021-04-27T16:03:50+0530 0.336ms; [no ensemble]::delete_data: dt_NKIB4LKXRTCTJXVRH4YLB6S2, deleted = yes
+2021-04-27T16:03:50+0530 0.725ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_A36RUPE4LXCMKA7JFNOLRQ44
+2021-04-27T16:03:50+0530 1.431ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.080ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.192ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.075ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.043ms; [no ensemble]::delete_data: dt_A36RUPE4LXCMKA7JFNOLRQ44, deleted = yes
+2021-04-27T16:03:50+0530 0.721ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_V2L2LIQNZS6XLNU6JRTFAA5D
+2021-04-27T16:03:50+0530 1.322ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.079ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 3.284ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.087ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.045ms; [no ensemble]::delete_data: dt_V2L2LIQNZS6XLNU6JRTFAA5D, deleted = yes
+2021-04-27T16:03:50+0530 0.730ms; RemoteEnsemble(16 models, 2 columns)::upload_data: 127x2, dt_NSGVKKEVEYWSDUSOF5TDFVNQ
+2021-04-27T16:03:50+0530 1.521ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x0
+2021-04-27T16:03:50+0530 0.070ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x0
+2021-04-27T16:03:50+0530 2.510ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: mean of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.069ms; RemoteEnsemble(16 models, 2 columns)::univariate_stat: variance of column 0 given 1x1
+2021-04-27T16:03:50+0530 0.043ms; [no ensemble]::delete_data: dt_NSGVKKEVEYWSDUSOF5TDFVNQ, deleted = yes

@@ -1,0 +1,22 @@
+Path-
+IIF([Table Name]="IPL Matches 2008-2020",0,1)
+
+
+Radial Angle -
+(INDEX()-1) * (1/WINDOW_COUNT(COUNT([Radial Field]))) * 2 * PI()
+
+
+Radial Normalised Length -
+[Radial Inner] + IIF(ATTR([Path Order]) = 0, 0, sum([Radial Field])/WINDOW_MAX(sum([Radial Field])) * ([Radial Outer]-[Radial Inner]))
+
+
+Radial X -
+[Radial Normalised Length] * COS([Radial Angle])
+
+
+Radial Y - 
+[Radial Normalised Length] * SIN([Radial Angle])
+
+
+normalized length - 
+[Radial Inner] + ([Radial Outer] - [Radial Inner]) * IIF(ATTR([Path Order])=0, 0, SUM([Radial Field]) / WINDOW_MAX(SUM([Radial Field]))) 
